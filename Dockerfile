@@ -32,6 +32,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && rm /opt/$SOLR.tgz \
  && ln -s /opt/$SOLR /opt/solr
 
+COPY solr /opt/solr-4.10.3/example/solr
+
 EXPOSE 8983
 
 # We will Put Our Image dockerimages/systemd-solr over that you should directly build that if you plan to run this in production
